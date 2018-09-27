@@ -1,0 +1,44 @@
+<html>
+ 
+ <head>
+
+</head>
+ 
+ 
+ 
+ 
+ <body>
+   <button onclick="changeMe()">Change Background</button>
+ <input type="text" id="userColor">
+ <button onclick="submitColor()">Enter your color</button>
+   
+   
+   <script>
+   var colors=[
+     "#00b4cc",
+     "#27f59e"
+   ];
+   
+   
+   function submitColor(){
+     var uColor= document.getElementById('userColor').value;
+     document.getElementById('userColor').value="";
+     colors.push(uColor);
+     
+   }
+   
+   function changeMe(){
+      var rand= Math.floor(Math.random()* colors.length);
+   document.body.style.backgroundColor = colors[rand];
+     
+   }
+   </script>
+ </body>
+ 
+ 
+ 
+ 
+ 
+ 
+  
+</html>
